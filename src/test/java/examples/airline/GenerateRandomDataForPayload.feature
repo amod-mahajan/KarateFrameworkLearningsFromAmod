@@ -10,3 +10,16 @@ Feature: Generate random data using Java faker library
       | id   | dataFakerObject.number().digits(5) |
       | name | dataFakerObject.name().fullName()  |
     * print jsonObjectPayload
+    * karate.set("daata", jsonObjectPayload)
+    * print karate.get("daata")
+
+  Scenario: Create simple JSON Object - Data Faker - WIth custom class
+    * def dataFaker = Java.type("examples.airline.utils.RandomDataGenerator")
+    * def idValue = dataFaker.getRandomInteger(6)
+    * def nameValue = dataFaker.getRandomFullName()
+    * set jsonObjectPayload
+      | path | value                              |
+      | id   | idValue |
+      | name | nameValue  |
+    * print jsonObjectPayload
+    * print karate.get("daata")

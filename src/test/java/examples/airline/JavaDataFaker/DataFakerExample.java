@@ -7,5 +7,6 @@ public class DataFakerExample {
         Faker faker = new Faker();
         System.out.println(faker.number().digits(5));
         System.out.println(faker.name().fullName());
+
     }
 }
