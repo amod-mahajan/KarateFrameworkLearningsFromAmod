@@ -12,4 +12,8 @@ public class RandomDataGenerator {
     public static String getRandomFullName() {
         return faker.name().fullName();
     }
+
+    public static String getRandomFullName(String s) {
+        return faker.name().fullName();
+    }
 }

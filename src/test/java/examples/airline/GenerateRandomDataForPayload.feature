@@ -16,7 +16,8 @@ Feature: Generate random data using Java faker library
   Scenario: Create simple JSON Object - Data Faker - WIth custom class
     * def dataFaker = Java.type("examples.airline.utils.RandomDataGenerator")
     * def idValue = dataFaker.getRandomInteger(6)
-    * def nameValue = dataFaker.getRandomFullName()
+    * def abc = "dsfds"
+    * def nameValue = dataFaker.getRandomFullName(abc)
     * set jsonObjectPayload
       | path | value                              |
       | id   | idValue |
