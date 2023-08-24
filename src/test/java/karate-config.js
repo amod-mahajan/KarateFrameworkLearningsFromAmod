@@ -4,6 +4,7 @@ function fn() {
   if (!env) {
     env = 'e2e';
   }
+  karate.configure('retry', {count :  5, interval:  5000})
   var config = {
     env: env,
     createAirlineUrl: "https://api.instantwebtools.net/v1/airlines",

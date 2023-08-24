@@ -29,4 +29,11 @@ public class JsonUtils {
                 .collect(Collectors.toMap(entry -> entry.getKey(), entry -> entry.getValue()));
         return objectMapper.writeValueAsString(jsonWithoutNull);
     }
+
+    public static boolean wannaRetry(String response) {
+        System.out.println("Retrying...");
+        return false;
+    }
+
+
 }
