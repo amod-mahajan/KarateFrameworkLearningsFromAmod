@@ -5,6 +5,8 @@ function fn() {
     env = 'e2e';
   }
   karate.configure('retry', {count :  5, interval:  5000})
+
+
   var config = {
     env: env,
     createAirlineUrl: "https://api.instantwebtools.net/v1/airlines",
@@ -22,5 +24,6 @@ function fn() {
     // customize
     config.someVar = 'e2eSomeVar'
   }
+  config.accessToken = karate.callSingle('Callable1.feature')
   return config;
 }

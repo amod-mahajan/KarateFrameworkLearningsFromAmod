@@ -63,3 +63,8 @@ Feature: This feature file will call other feature files
     * def returnData = call read('Callable4.feature@failure') jsonObject
     * print returnData
     * print returnData.response.token
+
+
+  Scenario: Calling callable5
+    * def returnData = call read('Callable5.feature')
+    * print returnData
