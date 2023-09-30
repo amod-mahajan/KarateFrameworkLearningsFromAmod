@@ -6,11 +6,11 @@ Feature: This feature file will call other feature files
     * print returnData.username
 
 
+
   Scenario: Calling callable1
     * def returnData = call read('Callable1.feature')
     * print returnData
     * print returnData.response.token
-
 
   Scenario: Calling callable2
     * def clientId = "IF32COO5YHLI1V1fbm6yaAxQG5w"

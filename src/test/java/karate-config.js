@@ -8,8 +8,8 @@ function fn() {
 
 
   var config = {
-    env: env,
-    createAirlineUrl: "https://api.instantwebtools.net/v1/airlines",
+    //env: env,
+    //createAirlineUrl: "https://api.instantwebtools.net/v1/airlines",
 //    userType: karate.properties['userType']
 //    fnameVal: 'amod',
 //    lnameVal: 'mahajan',
@@ -19,11 +19,11 @@ function fn() {
   if (env == 'dev') {
     // customize
     // e.g. config.foo = 'bar';
-    config.someVar = 'devSomeVar'
+    //config.someVar = 'devSomeVar'
   } else if (env == 'e2e') {
     // customize
-    config.someVar = 'e2eSomeVar'
+    //config.someVar = 'e2eSomeVar'
   }
-  config.accessToken = karate.callSingle('Callable1.feature')
+  //config.accessToken = karate.callSingle('Callable1.feature')
   return config;
 }
